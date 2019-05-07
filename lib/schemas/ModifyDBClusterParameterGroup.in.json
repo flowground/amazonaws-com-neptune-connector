@@ -1,0 +1,109 @@
+{
+    "type": "object",
+    "properties": {
+        "Action": {
+            "required": true,
+            "type": "string"
+        },
+        "Version": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "<p/>",
+            "properties": {
+                "DBClusterParameterGroupName": {
+                    "description": "The name of the DB cluster parameter group to modify.",
+                    "type": "string"
+                },
+                "Parameters": {
+                    "description": "A list of parameters in the DB cluster parameter group to modify.",
+                    "items": {
+                        "description": "<p> This data type is used as a request parameter in the <a>ModifyDBParameterGroup</a> and <a>ResetDBParameterGroup</a> actions. </p> <p>This data type is used as a response element in the <a>DescribeEngineDefaultParameters</a> and <a>DescribeDBParameters</a> actions.</p>",
+                        "properties": {
+                            "AllowedValues": {
+                                "description": "Specifies the valid range of values for the parameter.",
+                                "type": "string"
+                            },
+                            "ApplyMethod": {
+                                "description": "Indicates when to apply parameter updates.",
+                                "enum": [
+                                    "immediate",
+                                    "pending-reboot"
+                                ],
+                                "type": "string"
+                            },
+                            "ApplyType": {
+                                "description": "Specifies the engine specific parameters type.",
+                                "type": "string"
+                            },
+                            "DataType": {
+                                "description": "Specifies the valid data type for the parameter.",
+                                "type": "string"
+                            },
+                            "Description": {
+                                "description": "Provides a description of the parameter.",
+                                "type": "string"
+                            },
+                            "IsModifiable": {
+                                "description": " Indicates whether (<code>true</code>) or not (<code>false</code>) the parameter can be modified. Some parameters have security or operational implications that prevent them from being changed. ",
+                                "type": "boolean"
+                            },
+                            "MinimumEngineVersion": {
+                                "description": "The earliest engine version to which the parameter can apply.",
+                                "type": "string"
+                            },
+                            "ParameterName": {
+                                "description": "Specifies the name of the parameter.",
+                                "type": "string"
+                            },
+                            "ParameterValue": {
+                                "description": "Specifies the value of the parameter.",
+                                "type": "string"
+                            },
+                            "Source": {
+                                "description": "Indicates the source of the parameter value.",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "DBClusterParameterGroupName",
+                "Parameters"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

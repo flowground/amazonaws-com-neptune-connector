@@ -1,0 +1,103 @@
+{
+    "type": "object",
+    "properties": {
+        "MaxRecords": {
+            "required": false,
+            "type": "string"
+        },
+        "Marker": {
+            "required": false,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "DBParameterGroupFamily": {
+                    "description": "<p>The name of a specific DB parameter group family to return details for.</p> <p>Constraints:</p> <ul> <li> <p>If supplied, must match an existing DBParameterGroupFamily.</p> </li> </ul>",
+                    "type": "string"
+                },
+                "DefaultOnly": {
+                    "description": "Indicates that only the default version of the specified engine or engine and major version combination is returned.",
+                    "type": "boolean"
+                },
+                "Engine": {
+                    "description": "The database engine to return.",
+                    "type": "string"
+                },
+                "EngineVersion": {
+                    "description": "<p>The database engine version to return.</p> <p>Example: <code>5.1.49</code> </p>",
+                    "type": "string"
+                },
+                "Filters": {
+                    "description": "Not currently supported.",
+                    "items": {
+                        "description": "This type is not currently supported.",
+                        "properties": {
+                            "Name": {
+                                "description": "This parameter is not currently supported.",
+                                "type": "string"
+                            },
+                            "Values": {
+                                "description": "This parameter is not currently supported.",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        },
+                        "required": [
+                            "Name",
+                            "Values"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "ListSupportedCharacterSets": {
+                    "description": "If this parameter is specified and the requested engine supports the <code>CharacterSetName</code> parameter for <code>CreateDBInstance</code>, the response includes a list of supported character sets for each engine version. ",
+                    "type": "boolean"
+                },
+                "ListSupportedTimezones": {
+                    "description": "If this parameter is specified and the requested engine supports the <code>TimeZone</code> parameter for <code>CreateDBInstance</code>, the response includes a list of supported time zones for each engine version. ",
+                    "type": "boolean"
+                },
+                "Marker": {
+                    "description": " An optional pagination token provided by a previous request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code>. ",
+                    "type": "string"
+                },
+                "MaxRecords": {
+                    "description": "<p> The maximum number of records to include in the response. If more than the <code>MaxRecords</code> value is available, a pagination token called a marker is included in the response so that the following results can be retrieved. </p> <p>Default: 100</p> <p>Constraints: Minimum 20, maximum 100.</p>",
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

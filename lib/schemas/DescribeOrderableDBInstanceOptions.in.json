@@ -1,0 +1,103 @@
+{
+    "type": "object",
+    "properties": {
+        "MaxRecords": {
+            "required": false,
+            "type": "string"
+        },
+        "Marker": {
+            "required": false,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "<p/>",
+            "properties": {
+                "DBInstanceClass": {
+                    "description": "The DB instance class filter value. Specify this parameter to show only the available offerings matching the specified DB instance class.",
+                    "type": "string"
+                },
+                "Engine": {
+                    "description": "The name of the engine to retrieve DB instance options for.",
+                    "type": "string"
+                },
+                "EngineVersion": {
+                    "description": "The engine version filter value. Specify this parameter to show only the available offerings matching the specified engine version.",
+                    "type": "string"
+                },
+                "Filters": {
+                    "description": "This parameter is not currently supported.",
+                    "items": {
+                        "description": "This type is not currently supported.",
+                        "properties": {
+                            "Name": {
+                                "description": "This parameter is not currently supported.",
+                                "type": "string"
+                            },
+                            "Values": {
+                                "description": "This parameter is not currently supported.",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        },
+                        "required": [
+                            "Name",
+                            "Values"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "LicenseModel": {
+                    "description": "The license model filter value. Specify this parameter to show only the available offerings matching the specified license model.",
+                    "type": "string"
+                },
+                "Marker": {
+                    "description": " An optional pagination token provided by a previous DescribeOrderableDBInstanceOptions request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by <code>MaxRecords</code> . ",
+                    "type": "string"
+                },
+                "MaxRecords": {
+                    "description": "<p> The maximum number of records to include in the response. If more records exist than the specified <code>MaxRecords</code> value, a pagination token called a marker is included in the response so that the remaining results can be retrieved. </p> <p>Default: 100</p> <p>Constraints: Minimum 20, maximum 100.</p>",
+                    "type": "integer"
+                },
+                "Vpc": {
+                    "description": "The VPC filter value. Specify this parameter to show only the available VPC or non-VPC offerings.",
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "Engine"
+            ],
+            "type": "object"
+        },
+        "X_Amz_Content_Sha256": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Date": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Algorithm": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Credential": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Security_Token": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_Signature": {
+            "required": false,
+            "type": "string"
+        },
+        "X_Amz_SignedHeaders": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
